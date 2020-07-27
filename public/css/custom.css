@@ -1,0 +1,14 @@
+/* Css For button inline with input text*/
+
+.custom-btn {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-top: 0px !important;
+}
+
+
+/* Css Style For Horizental Form Submit Button*/
+
+.btn-form-custom {
+    padding-left: 0px;
+}
