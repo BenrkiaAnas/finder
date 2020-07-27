@@ -17,23 +17,19 @@ Auth::routes(['verify' => true]);
 
 Route::get('/',function(){
     return view('auth.login');
-})->name('login');
+});
 
 Route::get('/dashboard','HomeController@index')->name('dashboard');
 
-Route::get('/facebook/interest','FacebookController@facebookInterest');
+Route::get('/facebook/interest','FacebookController@facebookInterest')->name('facebook_interest');
 
-Route::get('/facebook/token','FacebookController@token');
+Route::get('/facebook/token','FacebookController@token')->name('facebook_token');
 
 Route::post('/facebook/token/update','FacebookController@updateToken');
 
-Route::get('/users',function(){
-    return view('users.list');
-});
+Route::get('/users','UserController@index')->name('users_list');
 
-Route::get('/user/create',function(){
-    return view('users.create');
-});
+Route::get('/user/create','UserController@create')->name('user_create');
 
 Route::get('/profile',function(){
     return view('account.profile');

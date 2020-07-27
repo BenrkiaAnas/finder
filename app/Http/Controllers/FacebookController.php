@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class FacebookController extends Controller
 {
-    //
+    //Constructer
     public function __construct()
     {
         $this->middleware('auth');

@@ -3,7 +3,8 @@
         <div class="logo-src"></div>
         <div class="header__pane ml-auto">
             <div>
-                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                    data-class="closed-sidebar">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
@@ -34,54 +35,61 @@
             <ul class="vertical-nav-menu">
 
                 <li>
-                    <a href="#">
+                    <a href="{{ route('dashboard') }}" class="{{ Route::is('dashboard') ? 'mm-active' : '' }}">
                         <i class="metismenu-icon pe-7s-home"></i>
                         Home
                     </a>
                 </li>
-                
-                <li>
+
+                <li
+                    class="{{ (Route::is('facebook_interest') ? 'mm-active' : '' || Route::is('facebook_token')) ? 'mm-active' : '' }}">
                     <a href="#">
                         <i class="metismenu-icon pe-7s-graph2"></i>
                         Facebook
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
-                    <ul>
+                    <ul
+                        class="{{ (Route::is('facebook_interest') ? 'mm-collapse mm-show' : '' || Route::is('facebook_token')) ? 'mm-collapse mm-show' : '' }}">
                         <li>
-                            <a href="{{url('/facebook/interest')}}">
+                            <a href="{{ url('/facebook/interest') }}"
+                                class="{{ Route::is('facebook_interest') ? 'mm-active' : '' }}">
                                 <i class="metismenu-icon"></i>
                                 Facebook Ads
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/facebook/token')}}">
+                            <a href="{{ url('/facebook/token') }}"
+                                class="{{ Route::is('facebook_token') ? 'mm-active' : '' }}">
                                 <i class="metismenu-icon">
                                 </i>Facebook Token
                             </a>
                         </li>
-                      
+
                     </ul>
                 </li>
-                <li>
+                <li
+                    class="{{ (Route::is('users_list') ? 'mm-active' : '' || Route::is('user_create')) ? 'mm-active' : '' }}">
                     <a href="#">
                         <i class="metismenu-icon pe-7s-users"></i>
                         Users
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
-                    <ul>
+                    <ul
+                        {{ (Route::is('users_list') ? 'mm-collapse mm-show' : '' || Route::is('user_create')) ? 'mm-collapse mm-show' : '' }}>
                         <li>
-                            <a href="components-tabs.html">
+                            <a href="{{ url('/users') }}" class="{{ Route::is('users_list') ? 'mm-active' : '' }}">
                                 <i class="metismenu-icon">
-                                </i>Liste Users
+                                </i>Users List
                             </a>
                         </li>
                         <li>
-                            <a href="components-accordions.html">
+                            <a href="{{ url('/user/create') }}"
+                                class="{{ Route::is('user_create') ? 'mm-active' : '' }}">
                                 <i class="metismenu-icon">
                                 </i>Create Users
                             </a>
                         </li>
-                     
+
                     </ul>
                 </li>
             </ul>

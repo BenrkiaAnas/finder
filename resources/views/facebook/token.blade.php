@@ -11,7 +11,7 @@
                                                 <i class="pe-7s-graph text-success">
                                                     </i>
                                             </div>-->
-                        <div>Facebook Interest
+                        <div>Facebook Token
 
                         </div>
                     </div>

@@ -12,3 +12,13 @@
 .btn-form-custom {
     padding-left: 0px;
 }
+
+
+/* Css Style Icon Action */
+
+.icon-action {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 1.5rem;
+}
