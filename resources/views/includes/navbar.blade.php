@@ -56,7 +56,7 @@
                                 <div tabindex="-1" role="menu" aria-hidden="true"
                                     class="dropdown-menu dropdown-menu-right">
                                     <a href="{{url('/profile')}}" tabindex="0" class="dropdown-item">Profile</a>
-                                    <a href="{{url('/logout')}}" tabindex="0" class="dropdown-item">Logout</a>
+                                    <a href="{{url('/logout')}}" tabindex="0" class="dropdown-item">Log out</a>
                                 </div>
                             </div>
                         </div>

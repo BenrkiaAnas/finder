@@ -67,17 +67,15 @@
 
                     </ul>
                 </li>
-                <li
-                    class="{{ (Route::is('users_list') ? 'mm-active' : '' || Route::is('user_create')) ? 'mm-active' : '' }}">
+                <li class="{{ Route::is('users_list') ? 'mm-active' : '' || Route::is('users_edit') ? 'mm-active' : '' || Route::is('user_create') ? 'mm-active' : '' }}">
                     <a href="#">
                         <i class="metismenu-icon pe-7s-users"></i>
                         Users
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
-                    <ul
-                        {{ (Route::is('users_list') ? 'mm-collapse mm-show' : '' || Route::is('user_create')) ? 'mm-collapse mm-show' : '' }}>
+                    <ul class="{{ Route::is('users_list') ? 'mm-collapse mm-show' : '' || Route::is('users_edit') ? 'mm-collapse mm-show' : '' || Route::is('user_create') ? 'mm-collapse mm-show' : '' }}" >
                         <li>
-                            <a href="{{ url('/users') }}" class="{{ Route::is('users_list') ? 'mm-active' : '' }}">
+                            <a href="{{ url('/users') }}" class="{{ Route::is('users_list') ? 'mm-active' : '' || Route::is('users_edit') ? 'mm-active' : '' }}">
                                 <i class="metismenu-icon">
                                 </i>Users List
                             </a>
@@ -86,7 +84,7 @@
                             <a href="{{ url('/user/create') }}"
                                 class="{{ Route::is('user_create') ? 'mm-active' : '' }}">
                                 <i class="metismenu-icon">
-                                </i>Create Users
+                                </i>Create User
                             </a>
                         </li>
 

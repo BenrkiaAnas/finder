@@ -19,6 +19,10 @@ Route::get('/',function(){
     return view('auth.login');
 });
 
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/dashboard','HomeController@index')->name('dashboard');
 
 Route::get('/facebook/interest','FacebookController@facebookInterest')->name('facebook_interest');
@@ -31,12 +35,17 @@ Route::get('/users','UserController@index')->name('users_list');
 
 Route::get('/user/create','UserController@create')->name('user_create');
 
-Route::get('/profile',function(){
-    return view('account.profile');
-});
+Route::post('/user/store','UserController@store');
+
+Route::get('/user/edit/{id}','UserController@edit')->name('user_edit');
+
+Route::post('/user/update/{id}','UserController@update');
+
+Route::get('/profile','UserController@profile');
+
+Route::post('/profile/update','UserController@updateProfile');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 /* === Cache === */
 Route::get('/clear', function () {

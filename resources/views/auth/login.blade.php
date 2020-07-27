@@ -79,7 +79,7 @@
 
                             </div>
                         </div>
-                        <div class="text-center text-white opacity-8 mt-3">Copyright Interest Finder © 2020</div>
+                        <div class="text-center text-white opacity-8 mt-3">Interest Finder © {{date('Y')}}</div>
                     </div>
                 </div>
             </div>

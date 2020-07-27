@@ -21,8 +21,16 @@
         <div class="app-main">
 
             @include('includes.sidebar')
+
+            <div class="app-main__outer">
+
+                @yield('content')
+
+                @include('includes.footer')
+
+            </div>
             
-            @yield('content')
+            
 
         </div>
     </div>
